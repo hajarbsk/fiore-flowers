@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fiore Flowers</title>
+<meta charset="utf-8" />
+<!-- Lien vers les fichiers CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ie6.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ie7.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="header">
+  <ul>
+    <li class="selected"><a href="#">home</a></li>
+    <li><a href="flowers.html">our flowers</a></li>
+    <li><a href="handling.html">handling &amp; delivery</a></li>
+    <li><a href="payment.html">payment &amp; ordering</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="blog.html">blog</a></li>
+    <li><a href="contact.html">contact us</a></li>
+  </ul>
+  <div class="logo"><a href="#"><img src="../static/images/logo.gif" alt="" /></a></div>
+</div>
+<div id="body">
+  <div class="featured">
+    <div>
+      <ul>
+        <li><a href="#"><img src="../static/images/backyard.jpg" alt="" /></a></li>
+        <li><a href="#"><img src="../static/images/garden.jpg" alt="" /></a></li>
+      </ul>
+      <div class="section">
+        <div> <a href="#"><img src="../static/images/bridal-bouquet.jpg" alt="" /></a>
+          <h2>Bienvenue dans notre store</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content"> <span class="heading"><img src="../static/images/special-occasions-flowers.gif" alt="" /></span>
+    <div class="upload">
+      <h2>Uploadez une image pour trouver des modèles similaires :</h2>
+      <label for="search" ></label>
+      <input type="text" id="search">
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+          <label for="upload"></label>
+          <input type="file" name="file"  required>
+          <button type="submit">Rechercher</button>
+      </form>
+    </div>
+    <div>
+      <div >
+        <ul>
+          <li><a href="#"><img src="../static/images/tulips.jpg" alt="" /> <span>Tulips</span> </a></li>
+          <li><a href="#"><img src="../static/images/bouquet.jpg" alt="" /> <span>Bouquet</span></a></li>
+          <li><a href="#"><img src="../static/images/Image_618.jpg" alt="" /> <span>Roses</span></a></li>
+          <li><a href="#"><img src="../static/images/bouquet2.jpg" alt="" /> <span>Bouquet</span></a></li>
+          <li><a href="#"><img src="../static/images/roses2.jpg" alt="" /> <span>Roses</span></a></li>
+          <li><a href="#"><img src="../static/images/bridal-bouquet2.jpg" alt="" /> <span>Bridal Bouquet</span></a></li>
+          <li><a href="#"><img src="../static/images/sunflower.jpg" alt="" /> <span>Sunflower</span></a></li>
+          <li><a href="#"><img src="../static/images/bouquet3.jpg" alt="" /> <span>Bouquet</span></a></li>
+          <li><a href="#"><img src="../static/images/speedwell.jpg" alt="" /> <span>Speedwell</span></a></li>
+          <li><a href="#"><img src="../static/images/Image_45.jpg" alt="" /> <span>Bridal Bouquet</span></a></li>
+        </ul>
+        <h4><a href="#">view all flowers</a></h4>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div>
+    <div class="connect">
+      <h4>Follow us:</h4>
+      <ul>
+        <li class="facebook"><a href="#">facebook</a></li>
+        <li class="twitter"><a href="#">twitter</a></li>
+      </ul>
+    </div>
+    <p>Copyright &copy; <a href="#">Domain Name</a> - Tous les droits sont proteges | Attendez nous sur: <a href="http://www.store_bsk.com/">Store_Bsk.com</a></p>
+  </div>
+</div>
+</body>
+</html>

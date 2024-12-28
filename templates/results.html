@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fiore Flowers</title>
+<meta charset="utf-8" />
+<!-- Lien vers les fichiers CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ie6.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ie7.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="header">
+  <ul>
+    <li class="selected"><a href="index.html">home</a></li>
+    <li><a href="flowers.html">our flowers</a></li>
+    <li><a href="handling.html">handling &amp; delivery</a></li>
+    <li><a href="payment.html">payment &amp; ordering</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="blog.html">blog</a></li>
+    <li><a href="contact.html">contact us</a></li>
+  </ul>
+  <div class="logo"><a href="index.html"><img src="../images/logo.gif" alt="" /></a></div>
+</div>
+<div id="body">
+  <div class="featured">
+    <div>
+      <ul>
+        <li><a href="#"><img src="../images/backyard.jpg" alt="" /></a></li>
+        <li><a href="#"><img src="../images/garden.jpg" alt="" /></a></li>
+      </ul>
+      <div class="section">
+        <div> <a href="#"><img src="../images/bridal-bouquet.jpg" alt="" /></a>
+          <h2>Bienvenue dans notre store</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h1>Résultats de la recherche</h1>
+    <p>Voici les modèles similaires à l'image téléchargée :</p>
+    <img src="{{ uploaded_image }}" alt="Image téléchargée" style="width:300px; height:auto;">
+
+    <h2>Images similaires :</h2>
+    <div class="container">
+        <!-- Affiche les images similaires -->
+        {% for result in results %}
+        <img 
+            src="{{ url_for('static', filename='test/' + result) }}" 
+            alt="Image similaire" 
+            loading="lazy" 
+            title="Cliquez pour agrandir">
+        {% endfor %}
+    </div>
+
+    <a href="/">Rechercher une autre image</a>
+  </div>
+</div>
+<div id="footer">
+  <div>
+    <div class="connect">
+      <h4>Follow us:</h4>
+      <ul>
+        <li class="facebook"><a href="#">facebook</a></li>
+        <li class="twitter"><a href="#">twitter</a></li>
+      </ul>
+    </div>
+    <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Template By <a target="_blank" href="http://www.freewebsitetemplates.com/">FreeWebsiteTemplates.com</a></p>
+  </div>
+</div>
+</body>
+</html>
